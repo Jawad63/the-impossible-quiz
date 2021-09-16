@@ -5,6 +5,8 @@ import QuestionCard from './components/QuestionCard';
 // Types:
 import { Difficulty } from './API';
 
+import { data } from './quizData';
+
 const TOTAL_QUESTIONS = 10;
 
 const App = () => {
@@ -14,6 +16,21 @@ const App = () => {
   const [userAnswers, setUserAnswers] = useState([]);
   const [score, setScore] = useState(0);
   const [gameOver, setGameOver] = useState(true);
+
+
+
+  // here goes code for setting array in useState(): 
+  
+  const [arrayData, setArrayData] = useState(data); // setting default value.
+
+  const handleArrayData = () => {
+    
+  };
+
+
+
+
+
 
   console.log(fetchQuizQestions(TOTAL_QUESTIONS, Difficulty.EASY ))
 
@@ -42,16 +59,30 @@ const App = () => {
       </button>
       <p className="score">Score:</p>
       <p className="questions">Loading Questions ...</p>
+
       {/*  
-      <QuestionCard
-        questionNr={number + 1}
-        totalQuestions={TOTAL_QUESTIONS}
-        question={questions[number].question} 
-        answers={questions[number].answers}
-        userAnswer={userAnswers ? userAnswers[number] : undefined}
-        callback={checkAnswer}
-          
-      /> */}
+        <QuestionCard
+          question={questions[number].question} 
+          answers={questions[number].answers}
+          callback={checkAnswer}
+          userAnswer={userAnswers ? userAnswers[number] : undefined}
+          questionNr={number + 1}
+          totalQuestions={TOTAL_QUESTIONS}
+        />
+        
+      */}
+
+      {/* Mapping over array of data:  */}
+      {arrayData.map((stuff, index) => (
+        // Setting "index" as key because Q&A&N can be repeated, It will be better if you assign uniqe id as key:
+        <li key={index}>
+          <span>question: {stuff.question}</span>
+          <span>answer: {stuff.answer}</span>
+          <span>number: {stuff.number}</span>
+        </li>
+      ))}
+
+
 
       <button className="next" onClick={nextQuestion}>
         Next Question
