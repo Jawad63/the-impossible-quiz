@@ -1,32 +1,61 @@
 import React from "react";
+import { formatWithOptions } from "util";
 
 // creating props for this component: 
 type Props = {
    question: string;
-   answers: string[];
+   options: string[];
+   answers: string;
    questionNr: number;
+
+
+}
+
+const checkAnswer = () => {
+   alert("grateful for help :)")
 }
 
 const QuestionCard: React.FC<Props> = ({
    question,
+   options,
    answers,
-   questionNr,
+   questionNr
+
+
 }) => {
    return (
       <div>
          {/* This will indicate on which question the user is on: */}
-         <p className="number">
-             {questionNr} 
+         <p>
+            {questionNr}
          </p>
 
          <p className="question">
              {question} 
          </p>
 
-         <p className="answers">
-            {answers} <br />
+         <div>
+            {options.map((option, index) => (
+               <li>{option}</li>
+            ))}
+         </div>
 
+
+         <p className="answers">
+            
+            {/* 
+            {answers.map((answer:string, index:any) => (
+               <li>{answer}</li>
+               
+            ))}
+            */}   
+
+            <input type="text" />
          </p>
+
+         <button onClick={checkAnswer}>Check</button>
+
+
       </div>
    )
 };
