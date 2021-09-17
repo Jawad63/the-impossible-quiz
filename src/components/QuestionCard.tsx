@@ -3,14 +3,14 @@ import React from "react";
 // creating props for this component: 
 type Props = {
    question: string;
-   answers: string;
+   answers: string[];
    questionNr: number;
 }
 
 const QuestionCard: React.FC<Props> = ({
    question,
    answers,
-   questionNr
+   questionNr,
 }) => {
    return (
       <div>
@@ -23,11 +23,10 @@ const QuestionCard: React.FC<Props> = ({
              {question} 
          </p>
 
-         
-         <div>
-            <input />
-            <p></p>
-         </div>
+         <p className="answers">
+            {answers} <br />
+
+         </p>
       </div>
    )
 };
