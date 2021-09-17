@@ -1,18 +1,19 @@
-import React from "react";
-import { formatWithOptions } from "util";
+import React, { useState } from 'react';
 
 // creating props for this component: 
 type Props = {
    question: string;
    options: string[];
-   answers: string;
+   answers: any;
    questionNr: number;
-
-
 }
 
+
+
 const checkAnswer = () => {
-   alert("grateful for help :)")
+   const user = document.getElementById("userInput") as HTMLInputElement;
+   const userGuess = user.value;
+   console.log(userGuess);
 }
 
 const QuestionCard: React.FC<Props> = ({
@@ -42,15 +43,7 @@ const QuestionCard: React.FC<Props> = ({
 
 
          <p className="answers">
-            
-            {/* 
-            {answers.map((answer:string, index:any) => (
-               <li>{answer}</li>
-               
-            ))}
-            */}   
-
-            <input type="text" />
+            <input type="text" id="userInput"/>
          </p>
 
          <button onClick={checkAnswer}>Check</button>
@@ -61,3 +54,4 @@ const QuestionCard: React.FC<Props> = ({
 };
 
 export default QuestionCard;
+

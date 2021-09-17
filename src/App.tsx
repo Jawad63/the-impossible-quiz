@@ -1,4 +1,3 @@
-  
 import React, { useState } from 'react';
 // Components : 
 import QuestionCard from './components/QuestionCard';
@@ -17,6 +16,7 @@ import { data } from './quizData';
 const App = () => {
 
   const [count, setCount] = useState(0);
+
 
 
   // this function will be triggered when the user clicks for the next Question:

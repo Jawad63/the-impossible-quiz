@@ -21,7 +21,7 @@ export const data = [
          "option 3",
          "option 4"
       ],
-      answer: "option 2",
+      answer: "option 3",
       number : 2
    },
 
