@@ -2,123 +2,123 @@ import React from "react";
 
 export const data = [
    {
-      question: "question 1",
+      question: "HTML is what type of language?",
       option: [
-         "option 1",
-         "option 2",
-         "option 3",
-         "option 4"
+         "Programming Language",
+         "Scripting Language",
+         "Markup Language",
+         "Network Protocol"
       ],
-      answer: "option 2",
+      answer: "Markup Language",
       number: 1
    },
 
    {
-      question: "question 2",
+      question: "HTML uses:",
       option: [
-         "option 1",
-         "option 2",
-         "option 3",
-         "option 4"
+         "Fixed tags defined by language",
+         "User defined tags",
+         "Pre-specified tags",
+         "Tags only for linking"
       ],
-      answer: "option 3",
+      answer: "Fixed tags defined by language",
       number : 2
    },
 
    {
-      question: "question 3",
+      question: "The year in which HTML was first proposed",
       option: [
-         "option 1",
-         "option 2",
-         "option 3",
-         "option 4"
+         "1996",
+         "1980",
+         "2000",
+         "1990"
       ],
-      answer: "option 2",
+      answer: "1990",
       number : 3
    },
 
    {
-      question: "question 4",
+      question: "Fundamental HTML Block is known as",
       option: [
-         "option 1",
-         "option 2",
-         "option 3",
-         "option 4"
+         "HTML Body",
+         "HTML Tag",
+         "HTML Attribute",
+         "HTML Element"
       ],
-      answer: "option 2",
+      answer: "HTML Tag",
       number : 4
 
    },
 
    {
-      question: "question 5",
+      question: "Apart from <b> tag, what other tag makes text bold?",
       option: [
-         "option 1",
-         "option 2",
-         "option 3",
-         "option 4"
+         "<fat>",
+         "<emp>",
+         "<black>",
+         "<strong>"
       ],
-      answer: "option 2",
+      answer: "<strong>",
       number : 5
    },
 
    {
-      question: "question 6",
+      question: "What is the full form of HTML?",
       option: [
-         "option 1",
-         "option 2",
-         "option 3",
-         "option 4"
+         "Hyper Teach Markup Language",
+         "HyperText Markup Language",
+         "Hyper Tech Markup Language",
+         "None of these"
       ],
-      answer: "option 2",
+      answer: "HyperText Markup Language",
       number : 6
    },
 
    {
-      question: "question 7",
+      question: "Who is Known as the father of World Wide Web (WWW)?",
       option: [
-         "option 1",
-         "option 2",
-         "option 3",
-         "option 4"
+         "Robert Cailliau",
+         "Tim Thompson",
+         "Charles Darwin",
+         "Tim Berners-Lee"
       ],
-      answer: "option 2",
+      answer: "Tim Berners-Lee",
       number : 7
    },
 
    {
-      question: "question 8",
+      question: "What should be the first tag in any HTML document?",
       option: [
-         "option 1",
-         "option 2",
-         "option 3",
-         "option 4"
+         "<head>",
+         "<title>",
+         "<html>",
+         "<document>"
       ],
-      answer: "option 2",
+      answer: "<html>",
       number : 8
    },
 
    {
-      question: "question 9",
+      question: "How can you make a bulleted list with numbers",
       option: [
-         "option 1",
-         "option 2",
-         "option 3",
-         "option 4"
+         "<dl>",
+         "<ul>",
+         "<list>",
+         "<ol>"
       ],
-      answer: "option 2",
+      answer: "<ol>",
       number : 9
    },
 
    {
-      question: "question 10",
+      question: "Who is the best programmer in the world?",
       option: [
-         "option 1",
-         "option 2",
-         "option 3",
-         "option 4"
+         "Bert",
+         "Basille",
+         "Dennis",
+         "Jawad the lord of programming (obviously me :))"
       ],
-      answer: "option 2",
+      answer: "Jawad the lord of programming (obviously me :))",
       number : 10
    }
    
