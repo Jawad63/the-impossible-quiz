@@ -10,7 +10,7 @@ export const data = [
          "option 4"
       ],
       answer: "option 2",
-      number : 1
+      number: 1
    },
 
    {

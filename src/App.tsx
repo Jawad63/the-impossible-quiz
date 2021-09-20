@@ -10,13 +10,15 @@ import { data } from './quizData';
   // TODO: Have multiple questions and one correct answer to them. 
   // TODO: When pressed on the wrong option it should point out the correct one with color green and the one user choose in color red. 
   // TODO: Add basic styling to the app. 
+  // TODO: make local storage that stores score and if the goes up my count should go up. 
 
 
 
 const App = () => {
 
   const [count, setCount] = useState(0);
-
+  const [score, setScore] = useState(0);
+  
 
 
   // this function will be triggered when the user clicks for the next Question:
@@ -30,17 +32,22 @@ const App = () => {
     return;
   }
 
+  const changeScore = (earnedScore: number) => {
+    setScore(score + earnedScore)
+  }
+
 
   return (
     <div className="App">
       <h1>Quiz App:</h1>
-      <p className="score">Score:</p>
+      <p className="score">Score:{score}</p>
 
       <QuestionCard
         question={data[count].question}
         options={data[count].option}
         answers={data[count].answer}
         questionNr={data[count].number}
+        setScore={changeScore}
       />
 
       <button className="next" onClick={nextQuestion}>

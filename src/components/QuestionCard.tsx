@@ -1,53 +1,63 @@
+import { count } from 'console';
 import React, { useState } from 'react';
 
-// creating props for this component: 
-type Props = {
-   question: string;
-   options: string[];
-   answers: any;
-   questionNr: number;
-}
 
+   // creating props for this component: 
+   type Props = {
+      question: string;
+      options: string[];
+      answers: any;
+      questionNr: number;
+      setScore: any;
+   }
 
-
-const checkAnswer = () => {
-   const user = document.getElementById("userInput") as HTMLInputElement;
-   const userGuess = user.value;
-   console.log(userGuess);
-}
-
-const QuestionCard: React.FC<Props> = ({
-   question,
-   options,
-   answers,
-   questionNr
+   const QuestionCard: React.FC<Props> = ({
+      question,
+      options,
+      answers,
+      questionNr,
+      setScore
 
 
 }) => {
+
+   const [guessAnswer, setGuessAnswer] = useState("");
+
+   const checkAnswer = () => {
+
+      if (guessAnswer.toLowerCase() === answers.toLowerCase()) {
+         setScore(1);
+         alert("you got the right answer");
+      } else {
+         setScore(-1);
+         alert("try again :(")
+      }
+   }
+
+   const setAnswer = (event:any) => {
+      setGuessAnswer(event.target.value);
+   }
+      
+
    return (
       <div>
-         {/* This will indicate on which question the user is on: */}
-         <p>
-            {questionNr}
-         </p>
-
          <p className="question">
              {question} 
          </p>
 
-         <div>
+         <div onChange={setAnswer}>
             {options.map((option, index) => (
-               <li>{option}</li>
+               <li key={index}><input type="radio" name="answer" value={option}/>{option}</li>
             ))}
          </div>
-
-
+         
+         {/* 
          <p className="answers">
             <input type="text" id="userInput"/>
          </p>
+         */}
 
-         <button onClick={checkAnswer}>Check</button>
-
+         <button onClick={checkAnswer}>Check</button> 
 
       </div>
    )
